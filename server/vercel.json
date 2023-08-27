@@ -1,15 +1,21 @@
 {
-    "version": "2",
-    "builds":[
-        {
-            "src":"*.js",
-            "user":"@vercel/node"
+    "version": 2,
+    "builds": [
+      {
+        "use": "@vercel/php",
+        "config": {
+          "maxDuration": 1800
         }
+      }
     ],
-    "routes":[
-        {
-            "src":"/(.*)",
-            "dest":"/"
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/public/$1",
+        "headers": {
+          "Cache-Control": "public, max-age=0, must-revalidate"
         }
+      }
     ]
-}
+  }
+  
