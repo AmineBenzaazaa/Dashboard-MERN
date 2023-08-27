@@ -2,19 +2,18 @@
     "version": 2,
     "builds": [
       {
-        "use": "@vercel/php",
-        "config": {
-          "maxDuration": 1800
-        }
+        "src": "server.js",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
       {
+        "src": "/api/(.*)",
+        "dest": "server.js"
+      },
+      {
         "src": "/(.*)",
-        "dest": "/public/$1",
-        "headers": {
-          "Cache-Control": "public, max-age=0, must-revalidate"
-        }
+        "dest": "public/$1"
       }
     ]
   }
