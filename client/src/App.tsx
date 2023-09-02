@@ -60,7 +60,7 @@ function App() {
 
             if (profileObj) {
                 const response = await fetch(
-                    "http://localhost:8080/api/v1/users",
+                    "https://dashboard-backend-plum.vercel.app/api/v1/users",
                     {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
