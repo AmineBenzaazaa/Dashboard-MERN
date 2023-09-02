@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
-import yariga from "./yariga.svg";
+import logo from "./bookit.png";
+import bookit from "./bookit.png";
 
-export { logo, yariga };
+export { logo, bookit };
