@@ -1,6 +1,7 @@
 // common
 import Profile from "./common/Profile";
 import PropertyCard from "./common/PropertyCard";
+import ReviewCard from "./common/ReviewCard";
 import CustomButton from "./common/CustomButton";
 
 // charts
@@ -17,6 +18,7 @@ import TopAgent from "./home/TopAgent";
 export {
     Profile,
     PropertyCard,
+    ReviewCard,
     CustomButton,
     PieChart,
     PropertyReferrals,

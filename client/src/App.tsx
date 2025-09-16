@@ -37,6 +37,7 @@ import {
     CreateProperty,
     AgentProfile,
     EditProperty,
+    Reviews,
 } from "pages";
 
 const axiosInstance = axios.create();
@@ -60,7 +61,7 @@ function App() {
 
             if (profileObj) {
                 const response = await fetch(
-                    "https://dashboard-backend-plum.vercel.app/api/v1/users",
+                    "https://dashboard-phi-dusky.vercel.app/api/v1/users",
                     {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
@@ -131,7 +132,7 @@ function App() {
             <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
             <RefineSnackbarProvider>
                 <Refine
-                    dataProvider={dataProvider("https://dashboard-backend-plum.vercel.app/api/v1")}
+                    dataProvider={dataProvider("https://dashboard-phi-dusky.vercel.app/api/v1")}
                     notificationProvider={notificationProvider}
                     ReadyPage={ReadyPage}
                     catchAll={<ErrorComponent />}
@@ -152,13 +153,8 @@ function App() {
                         },
                         {
                             name: "reviews",
-                            list: Home,
+                            list: Reviews,
                             icon: <StarOutlineRounded />,
-                        },
-                        {
-                            name: "messages",
-                            list: Home,
-                            icon: <ChatBubbleOutline />,
                         },
                         {
                             name: "my-profile",
